@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testimonials | SP Super Speciality Clinic</title>
+  <meta name="description" content="Read and submit testimonials for SP Super Speciality Clinic." />
+  <meta property="og:title" content="SP Super Speciality Clinic | Testimonials" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="../clinic_logo.jpeg" alt="SP Clinic Logo" width="40" height="40" style="border-radius:50%; object-fit:cover; object-position: 2% 2%; vertical-align:middle;" />
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">SP Super Speciality Clinic</span>
+          <span class="brand-sub">Wakad, Pune</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span aria-hidden="true"></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <a href="./home.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./doctors.html">Doctors</a>
+        <a href="./services.html">Services</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./testimonials.html">Testimonials</a>
+        <a href="./faqs.html">FAQs</a>
+        <a href="./appointment.html" class="nav-cta">Appointment</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <section class="section alt" id="testimonials" aria-labelledby="test-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="test-title">Testimonials</h2>
+          <p>What families appreciate about the experience.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card glass">
+            <h3>Clear guidance</h3>
+            <p>"The consultation was reassuring. We understood the next steps clearly."</p>
+          </div>
+          <div class="card glass">
+            <h3>Patient-friendly</h3>
+            <p>"Our child felt comfortable. The support for parents was exceptional."</p>
+          </div>
+          <div class="card glass">
+            <h3>Professional approach</h3>
+            <p>"The team coordinated quickly through WhatsApp. Booking was easy."</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="grid-2 testimonials-layout">
+          <div class="card glass">
+            <h3>Submit Your Review</h3>
+            <p class="muted">Help other families by sharing your experience</p>
+
+            <form id="review-form" class="review-form" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="reviewName">Name *</label>
+                  <input id="reviewName" name="reviewName" type="text" autocomplete="name" required />
+                  <span class="error" data-for="reviewName" aria-live="polite"></span>
+                </div>
+
+                <div class="field field-full">
+                  <label>Rating *</label>
+                  <div class="rating-wrap">
+                    <div class="rating-stars" role="radiogroup" aria-label="Rating" id="star-group">
+                      <div class="star-option">
+                        <input type="radio" id="star1" name="reviewRating" value="1" required />
+                        <label for="star1" class="star-lbl" title="1 star">★</label>
+                        <span class="star-num">1</span>
+                      </div>
+                      <div class="star-option">
+                        <input type="radio" id="star2" name="reviewRating" value="2" />
+                        <label for="star2" class="star-lbl" title="2 stars">★</label>
+                        <span class="star-num">2</span>
+                      </div>
+                      <div class="star-option">
+                        <input type="radio" id="star3" name="reviewRating" value="3" />
+                        <label for="star3" class="star-lbl" title="3 stars">★</label>
+                        <span class="star-num">3</span>
+                      </div>
+                      <div class="star-option">
+                        <input type="radio" id="star4" name="reviewRating" value="4" />
+                        <label for="star4" class="star-lbl" title="4 stars">★</label>
+                        <span class="star-num">4</span>
+                      </div>
+                      <div class="star-option">
+                        <input type="radio" id="star5" name="reviewRating" value="5" />
+                        <label for="star5" class="star-lbl" title="5 stars">★</label>
+                        <span class="star-num">5</span>
+                      </div>
+                    </div>
+                    <div class="rating-feedback" aria-live="polite" id="rating-feedback">
+                      <span id="review-rating-value">Tap a star to rate</span>
+                    </div>
+                  </div>
+                  <span class="error" data-for="reviewRating" aria-live="polite"></span>
+                </div>
+
+                <div class="field field-full">
+                  <label for="reviewText">Review *</label>
+                  <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
+                  <span class="error" data-for="reviewText" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn primary" type="submit">Submit Review</button>
+              </div>
+
+              <div class="success" id="review-success" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <div class="card glass">
+            <h3>Recent Reviews</h3>
+            <p class="muted"></p>
+            <div id="review-list" class="review-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-copy"><strong>© 2025 SP Super Speciality Clinic.</strong> All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./appointment.html">Appointment</a>
+          <a href="./faqs.html">FAQs</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Social</h3>
+        <div class="footer-links">
+          <a href="https://wa.me/919850823550" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span class="muted">Fast, lightweight, and mobile-friendly.</span>
+        <a class="to-top" href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

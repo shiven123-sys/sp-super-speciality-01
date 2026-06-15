@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Appointment | SP Super Speciality Clinic</title>
+  <meta name="description" content="Book an appointment — pediatric & neonatal surgical care via WhatsApp." />
+  <meta property="og:title" content="SP Super Speciality Clinic | Appointment" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="../clinic_logo.jpeg" alt="SP Clinic Logo" width="40" height="40" style="border-radius:50%; object-fit:cover; object-position: 2% 2%; vertical-align:middle;" />
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">SP Super Speciality Clinic</span>
+          <span class="brand-sub">Wakad, Pune</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span aria-hidden="true"></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <a href="./home.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./doctors.html">Doctors</a>
+        <a href="./services.html">Services</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./testimonials.html">Testimonials</a>
+        <a href="./faqs.html">FAQs</a>
+        <a href="./appointment.html" class="nav-cta">Appointment</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <section class="section" id="appointment" aria-labelledby="appt-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="appt-title">Appointment Booking</h2>
+          <p>Fill in the details—then we'll prepare a WhatsApp message for fast booking.</p>
+        </div>
+
+        <div class="card glass">
+          <form id="appointment-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="parentName">Parent Name *</label>
+                <input id="parentName" name="parentName" type="text" autocomplete="name" required />
+                <span class="error" data-for="parentName" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="childName">Child Name *</label>
+                <input id="childName" name="childName" type="text" autocomplete="off" required />
+                <span class="error" data-for="childName" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="childAge">Child Age *</label>
+                <input id="childAge" name="childAge" type="number" min="0" step="1" required />
+                <span class="error" data-for="childAge" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="doctor">Doctor Selection *</label>
+                <select id="doctor" name="doctor" required>
+                  <option value="" selected disabled>Select</option>
+                  <option value="Dr. Ashlesha Shimpi-Dighe">Dr. Ashlesha Shimpi-Dighe</option>
+                  <option value="Dr. Mohnish Dighe">Dr. Mohnish Dighe</option>
+                </select>
+                <span class="error" data-for="doctor" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="gender">Gender *</label>
+                <select id="gender" name="gender" required>
+                  <option value="" selected disabled>Select</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+                <span class="error" data-for="gender" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="mobile">Mobile Number *</label>
+                <input id="mobile" name="mobile" type="tel" inputmode="tel" placeholder="10-digit number" required />
+                <span class="error" data-for="mobile" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address *</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <span class="error" data-for="email" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="city">City *</label>
+                <input id="city" name="city" type="text" required />
+                <span class="error" data-for="city" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="preferredDate">Preferred Appointment Date *</label>
+                <input id="preferredDate" name="preferredDate" type="date" required />
+                <span class="error" data-for="preferredDate" aria-live="polite"></span>
+              </div>
+
+              <div class="field">
+                <label for="preferredTime">Preferred Time Slot *</label>
+                <select id="preferredTime" name="preferredTime" required>
+                  <option value="" selected disabled>Select</option>
+                  <option>6:30 PM - 7:00 PM</option>
+                  <option>7:00 PM - 7:30 PM</option>
+                  <option>7:30 PM - 8:00 PM</option>
+                  <option>8:00 PM - 8:30 PM</option>
+                </select>
+                <span class="error" data-for="preferredTime" aria-live="polite"></span>
+              </div>
+
+              <div class="field field-full">
+                <label for="reason">Reason for Consultation *</label>
+                <select id="reason" name="reason" required>
+                  <option value="" selected disabled>Select</option>
+                  <option value="Surgical consultation">Surgical consultation</option>
+                  <option value="Neonatal surgical concern">Neonatal surgical concern</option>
+                  <option value="Follow-up / review">Follow-up / review</option>
+                  <option value="General surgical guidance">General surgical guidance</option>
+                  <option value="Emergency guidance">Emergency guidance</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error" data-for="reason" aria-live="polite"></span>
+              </div>
+
+              <div class="field field-full">
+                <label for="problem">Problem Description *</label>
+                <textarea id="problem" name="problem" rows="4" required></textarea>
+                <span class="error" data-for="problem" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Prepare WhatsApp Request</button>
+              <div class="form-footnote">
+                By booking, you agree the clinic will review availability and contact you for confirmation.
+              </div>
+            </div>
+
+            <div class="success" id="form-success" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C14.7614 2 17 4.23858 17 7V10H19C21.2091 10 23 11.7909 23 14C23 16.2091 21.2091 18 19 18H17V21C17 22.1046 16.1046 23 15 23C13.8954 23 13 22.1046 13 21V18H10V21C10 22.1046 9.10457 23 8 23C6.89543 23 6 22.1046 6 21V18H5C2.79086 18 1 16.2091 1 14C1 11.7909 2.79086 10 5 10H7V7C7 4.23858 9.23858 2 12 2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="footer-copy"><strong>© 2025 SP Super Speciality Clinic.</strong> All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./appointment.html">Appointment</a>
+          <a href="./faqs.html">FAQs</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Social</h3>
+        <div class="footer-links">
+          <a href="#" onclick="return false;" aria-disabled="true">Instagram</a>
+          <a href="https://wa.me/919850823550" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <div class="footer-line">
+          <span class="footer-label">Phone:</span>
+          <a class="link" href="tel:+919850823550">+91 9850823550</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span class="muted">Fast, lightweight, and mobile-friendly.</span>
+        <a class="to-top" href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+
